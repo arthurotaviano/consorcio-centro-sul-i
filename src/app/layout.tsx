@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/navbar/navbar'
 import type { Metadata } from 'next'
 import { Source_Sans_3 } from 'next/font/google'
 import './globals.css'
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR' className={`${sourceSans.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
